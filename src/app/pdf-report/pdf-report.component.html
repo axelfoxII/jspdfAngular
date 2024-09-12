@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Reporte de Datos</h1>
+<p>Nombre: {{nombreAuthor}}</p>    
+<p>Fecha: {{fechaNow}}</p>
+<table id ="pdfContent" class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Item</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of data; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{item}} </td>
+            
+        </tr>
+    </tbody>
+
+</table>    
+<button class="btn btn-primary" (click)="generatePDF()"> Generar PDF</button>
+</div>
